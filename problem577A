@@ -1,0 +1,19 @@
+#include<bits/stdc++.h>
+#include <bitset>
+
+using namespace std;
+
+int sum[100];
+
+int main()
+{
+    long long  n, x,counter=0;
+	cin >> n >> x;
+	for(int i=1;i<=n;i++)
+	{
+		if (x%i==0 && x<=i*n){
+            counter++;
+		}
+	}
+	cout << counter;
+}
