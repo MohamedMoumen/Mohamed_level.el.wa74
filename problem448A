@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+#include <bitset>
+
+using namespace std;
+
+int sum[100];
+
+int main()
+{
+    int a1 , a2 ,a3;
+    int b1 , b2 ,b3;
+    int n ,sum1 , sum2 ,m1 ,m2;
+    cin >> a1 >> a2 >> a3 >> b1 >> b2 >> b3 ;
+    cin >> n;
+    sum1 = (a1+a2+a3);
+    sum2 = (b1+b2+b3);
+    m1=sum1%5;
+    m2=sum2%10;
+    sum1/=5;
+    sum2/=10;
+    if(m1>0){
+        sum1+=1;
+    }
+    if(m2>0){
+        sum2+=1;
+    }
+    if(n>=(sum1+sum2)) cout << "YES";
+    else cout << "NO";
+}
