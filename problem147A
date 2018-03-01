@@ -1,0 +1,36 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+	string a;
+	char x;
+	getline(cin ,a);
+	for (int i = 0; i < a.size(); i++)
+	{
+
+		if (a[i] == ' ')
+		{
+			while (true)
+			{
+				if(a[i]!=' ')
+				{
+					x = a[i];
+					break;
+				}
+				i++;
+			}
+			if (x != ',' && x != '.' &&x != '!' &&x != '?' ){
+				cout << " " ;
+			}
+			i--;
+		}
+		else if ((a[i] == ','|| a[i]=='?' || a[i]=='.' || a[i]=='!' )&& a[i + 1] != ' ')
+		{
+			cout << a[i] << " ";
+		}
+		else
+			cout << a[i];
+	}
+}
